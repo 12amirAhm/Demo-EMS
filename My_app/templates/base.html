@@ -1,0 +1,491 @@
+
+<!-- This template file is the main Landing page of the website -->
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<title>{% block title %}{% endblock %}</title>
+{% load static %}  
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"/>
+<link rel = "stylesheet" type = "text/css" href = "https://cdn.datatables.net/1.12.0/css/jquery.dataTables.min.css"/>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+
+<!-- Favicons -->
+<link href="{% static ' assets/img/favicon.png' %}" rel="icon">
+<link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+<link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+
+
+
+
+</head> 
+<body>
+
+   
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+   <div class="container d-flex align-items-center justify-content-between">
+
+     <div class="logo">
+       <h1 class="text-light"><a href="#hero"><span>Demo - EMS</span></a></h1>
+       <!-- Uncomment below if you prefer to use an image logo -->
+       <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+     </div>
+
+     <nav id="navbar" class="navbar">
+       <ul>
+         <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+         <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+         <li><a class="nav-link scrollto" href="#services">Services</a></li>
+         <li><a class="nav-link scrollto" href="#team">Team</a></li>
+         <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+           <ul>
+             <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+               <ul>
+                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="#team">Team</a></li>
+               </ul>
+             </li>
+           </ul>
+         </li>
+       </ul>
+       <i class="bi bi-list mobile-nav-toggle"></i>
+     </nav><!-- .navbar -->
+
+   </div>
+ </header><!-- End Header -->
+
+ 
+  
+
+  <!-- ======= MAIN ======= -->
+ <main id="main">
+  <section id="hero">
+    <div  class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Demo - EMS</span></h2>
+                <p class="animate__animated animate__fadeInUp">EMS stands for Employee Management System.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Free Trial</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-2.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Demo - EMS for your Business</h2>
+                <p class="animate__animated animate__fadeInUp">Our EMS service will reduce business hustle.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Free Trial</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background-image: url(static/assets/img/slide/slide-3.jpg);">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Demo - EMS for Presentation</h2>
+                <p class="animate__animated animate__fadeInUp">Demo - EMS will provide you with latest and greatest employee data.</p>
+                <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Free Trial</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-double-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-double-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+ </section>
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Demo - EMS is a company that offer fullstack and responsive website for your business, that you can use it to control your Employees Information and Activity.</p>
+        </div>
+        <div class="section-title">
+         <h1> Try Our Service Here </h1> 
+        </div>
+      <div style="display: flex; flex-direction: column;" class="row">
+          {% block content %}{% endblock %}
+      </div>
+      </div>
+    </section><!-- End About Us Section -->
+   <!-- ======= Counts Section ======= -->
+        <section class="counts section-bg">
+         <div class="container">
+   
+           <div class="row no-gutters">
+   
+             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+               <div class="count-box">
+                 <i class="bi bi-emoji-smile"></i>
+                 <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                 <p><strong>Happy Clients</strong></p>
+                 <a href="#">Find out more &raquo;</a>
+               </div>
+             </div>
+   
+             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+               <div class="count-box">
+                 <i class="bi bi-journal-richtext"></i>
+                 <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                 <p><strong>Projects</strong></p>
+                 <a href="#">Find out more &raquo;</a>
+               </div>
+             </div>
+   
+             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+               <div class="count-box">
+                 <i class="bi bi-headset"></i>
+                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                 <p><strong>Hours Of Support</strong></p>
+                 <a href="#">Find out more &raquo;</a>
+               </div>
+             </div>
+   
+             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+               <div class="count-box">
+                 <i class="bi bi-people"></i>
+                 <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                 <p><strong>Hard Workers</strong></p>
+                 <a href="#">Find out more &raquo;</a>
+               </div>
+             </div>
+   
+           </div>
+   
+         </div>
+       </section><!-- End Counts Section -->
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Demo - EMS services is great fit for all kinds of business that have multiple employees.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Fullstack Web Development</a></h4>
+              <p class="description">Our websites are powerfull and responsive for any devices.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Mobile App Development</a></h4>
+              <p class="description">We can get you Android or Ios EMS Apps for your business</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">One to One Consultation</a></h4>
+              <p class="description">If you are not sure what is next for your business call us, we will tell you what to do</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Coaching and Trainings</a></h4>
+              <p class="description">Different kinds of Trainings will be given by our talented team.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+<!-- ======= Our Team Section ======= -->
+<section id="team" class="team">
+   <div class="container">
+
+     <div class="section-title">
+       <h2>Our Team</h2>
+       <p>Our team is composed of young and experianced individuals who loves to take risks and do Hard things. You can also connect them in socials</p>
+     </div>
+
+     <div class="row">
+
+       <div class="col-xl-3 col-lg-4 col-md-6">
+         <div class="member">
+           <img src="static/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+           <div class="member-info">
+             <div class="member-info-content">
+               <h4>Walter White</h4>
+               <span>Chief Executive Officer</span>
+             </div>
+             <div class="social">
+               <a href=""><i class="bi bi-twitter"></i></a>
+               <a href=""><i class="bi bi-facebook"></i></a>
+               <a href=""><i class="bi bi-instagram"></i></a>
+               <a href=""><i class="bi bi-linkedin"></i></a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
+         <div class="member">
+           <img src="static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+           <div class="member-info">
+             <div class="member-info-content">
+               <h4>Sarah Jhonson</h4>
+               <span>Product Manager</span>
+             </div>
+             <div class="social">
+               <a href=""><i class="bi bi-twitter"></i></a>
+               <a href=""><i class="bi bi-facebook"></i></a>
+               <a href=""><i class="bi bi-instagram"></i></a>
+               <a href=""><i class="bi bi-linkedin"></i></a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
+         <div class="member">
+           <img src="static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+           <div class="member-info">
+             <div class="member-info-content">
+               <h4>William Anderson</h4>
+               <span>CTO</span>
+             </div>
+             <div class="social">
+               <a href=""><i class="bi bi-twitter"></i></a>
+               <a href=""><i class="bi bi-facebook"></i></a>
+               <a href=""><i class="bi bi-instagram"></i></a>
+               <a href=""><i class="bi bi-linkedin"></i></a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
+         <div class="member">
+           <img src="static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+           <div class="member-info">
+             <div class="member-info-content">
+               <h4>Amanda Jepson</h4>
+               <span>Accountant</span>
+             </div>
+             <div class="social">
+               <a href=""><i class="bi bi-twitter"></i></a>
+               <a href=""><i class="bi bi-facebook"></i></a>
+               <a href=""><i class="bi bi-instagram"></i></a>
+               <a href=""><i class="bi bi-linkedin"></i></a>
+             </div>
+           </div>
+         </div>
+       </div>
+
+     </div>
+
+   </div>
+ </section><!-- End Our Team Section -->
+
+<!-- ======= Contact Us Section ======= -->
+<section id="contact" class="contact section-bg">
+
+   <div class="container">
+     <div class="section-title">
+       <h2>Contact Us</h2>
+       <p>Reach out to us we will respond soon.</p>
+     </div>
+   </div>
+
+   <div class="container-fluid">
+
+     <div class="row">
+
+       <div class="col-lg-6 d-flex align-items-stretch infos">
+
+         <div class="row">
+
+           <div class="col-lg-6 info d-flex flex-column align-items-stretch">
+             <i class="bx bx-map"></i>
+             <h4>Address</h4>
+             <p>Bole - Rwanda Road,<br>Addis Ababa, Ethiopia</p>
+           </div>
+           <div class="col-lg-6 info info-bg d-flex flex-column align-items-stretch">
+             <i class="bx bx-phone"></i>
+             <h4>Call Us</h4>
+             <p>+251 963360740<br>+251 905012424</p>
+           </div>
+           <div class="col-lg-6 info info-bg d-flex flex-column align-items-stretch">
+             <i class="bx bx-envelope"></i>
+             <h4>Email Us</h4>
+             <p>contact@demoems.com<br>demoems@gmail.com</p>
+           </div>
+           <div class="col-lg-6 info d-flex flex-column align-items-stretch">
+             <i class="bx bx-time-five"></i>
+             <h4>Working Hours</h4>
+             <p>Mon - Fri: 9AM to 5PM<br>Saturday: 9AM to 1PM</p>
+           </div>
+         </div>
+
+       </div>
+
+       
+         <div class="col-lg-6 d-flex align-items-stretch contact-form-wrap" 
+         style="background-image: url(static/assets/img/info-box.jpg);">
+         &nbsp;
+      </div>
+       
+
+     </div>
+
+   </div>
+ </section><!-- End Contact Us Section --> 
+ </main>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+   <div class="footer-top">
+     <div class="container">
+       <div class="row">
+
+         <div class="col-lg-3 col-md-6 footer-info">
+           <h3>Demo-EMS</h3>
+           <p>
+             Bole - Rwanda Road <br>
+             Addis Ababa, Ethiopia<br><br>
+             <strong>Phone:</strong> +251 963360740<br>
+             <strong>Email:</strong> info@demoems.com<br>
+           </p>
+           <div class="social-links mt-3">
+             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+             <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+             <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+             <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+           </div>
+         </div>
+
+         <div class="col-lg-2 col-md-6 footer-links">
+           <h4>Useful Links</h4>
+           <ul>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+           </ul>
+         </div>
+
+         <div class="col-lg-3 col-md-6 footer-links">
+           <h4>Our Services</h4>
+           <ul>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Mobile App Development</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">One to One Consultation</a></li>
+             <li><i class="bx bx-chevron-right"></i> <a href="#">Coaching and Trainings</a></li>
+             
+           </ul>
+         </div>
+
+         <div class="col-lg-4 col-md-6 footer-newsletter">
+           <h4>Our Newsletter</h4>
+           <p>Follow us on social medias, we will post diffrent news there.</p>
+          
+         </div>
+
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+     <div class="copyright">
+       &copy; Copyright <strong><span>Demo-EMS</span></strong>. All Rights Reserved
+     </div>
+     <div class="credits">
+       
+       Designed by <a href="#">Demo-EMS</a>
+     </div>
+   </div>
+ </footer><!-- End Footer -->
+
+
+ 
+
+ 
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src = "https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#bootstrapdatatable').DataTable({     
+      "aLengthMenu": [[3, 5, 10, 25, -1], [3, 5, 10, 25, "All"]],
+        "iDisplayLength": 3
+       } 
+    );
+} );
+</script>
+
+
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+</body> 
+
+
+
+</html>
